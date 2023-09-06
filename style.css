@@ -1,8 +1,22 @@
 tr, td, th, table {
-    border: 1px solid black;
+    border: 1px solid red;
+    border-radius: 15px;
+    border-spacing: 0px;
 }
 
 tr td[colspan="2"] {
     text-align:center;
 }
 
+/* Je choisi le troisième enfant de tr */
+tr:nth-child(3) {
+    background-color: brown;
+}
+
+.bonjour tr td{
+    background-color: aquamarine;
+}
+
+#animal:hover {
+    cursor: pointer
+}

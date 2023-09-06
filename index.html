@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <title>Cours HTML</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+
 
 </head>
-<body>
-    <p>Bonjour je suis de bonne humeur ! </p>
+<body onload="onload">
+    <p class="bonjour">Bonjour je suis de bonne humeur ! </p>
 
-    <table>
+    <table class="bonjour">
         <!-- Le tr sert à rajouter des lignes à mon tableau-->
         <tr>
             <!-- les th et td ont le même rôle ajouté des colonnes sur ma ligne 
@@ -64,6 +64,7 @@
             <td>Luxembourg</td>
         </tr>
     </table>
+    <br><br>
     <table>
         <tr>
             <th colspan="2">Language And Frameworks</th>
@@ -81,6 +82,78 @@
             <td>Ruby on Rails</td>
         </tr>
     </table>
+    <br><br>
+    <table>
+        <tr>
+            <th colspan="6">Time Table</th>
+        </tr>
+        <tr>
+            <th rowspan="6">Hours</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Arts</td>
+        </tr>
+        <tr>
+            <td>Social</td>
+            <td>History</td>
+            <td>English</td>
+            <td>Social</td>
+            <td>Sports</td>
+        </tr>
+        <tr>
+            <th colspan="5">Lunch</th>
+        </tr>
+        <tr>
+            <td>Science</td>
+            <td>Maths</td>
+            <td>Science</td>
+            <td>Maths</td>
+            <td rowspan="2">Project</td>
+        </tr>
+        <tr>
+            <td>Social</td>
+            <td>History</td>
+            <td>English</td>
+            <td>Social</td>
+        </tr>
+    </table>
+    <p id="animal">Test</p>
     
+    <form action="">
+        <label for="name">Nom : </label>
+        <input type="text" name="name" id="name">
+        <br><br>
+        <label for="prenom">Prénom : </label>
+        <input type="text" name="prenom" id="prenom">
+        <br><br>
+        <label for="age">Age : </label>
+        <input type="number" name="age" id="age">
+        <br><br>
+        <input type="radio" name="sexe" id="masculin">
+        <label for="masculin">Masculin</label>
+        <br>
+        <input type="radio" name="sexe" id="feminin">
+        <label for="feminin">Féminin</label>
+        <br>
+        <input type="radio" name="sexe" id="autruche">
+        <label for="autruche">Autruche</label>
+        <br><br>
+        <input type="checkbox" name="me" id="me">
+        <label for="me">Je suis moi ?</label>
+        <br><br>
+        <input type="submit" value="Envoyer !">
+    </form>
+    
+    <script src="./script.js"></script>
+
 </body>
 </html>
