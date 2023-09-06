@@ -45,8 +45,7 @@ function horloge() {
         // temps += 1 // temps -= 
         // J'additionne 1 à ma variable temps
         console.log(temps)
-    }
-    
+    } 
 }
 
  // setInterval(horloge, 1000)
@@ -67,3 +66,5 @@ function montre() {
 } 
 
 setInterval(montre, 2000)
+
+
