@@ -4,6 +4,8 @@ tr, td, th, table {
     border-spacing: 0px;
 }
 
+/* Je séléctionne tout les td qui on 
+le paramètre colspan=2 dans leur balise*/
 tr td[colspan="2"] {
     text-align:center;
 }
@@ -16,7 +18,18 @@ tr:nth-child(3) {
 .bonjour tr td{
     background-color: aquamarine;
 }
-
+/* Je modife le curseur que  
+quand la souris passe par dessu */
 #animal:hover {
-    cursor: pointer
+    cursor: pointer;
+}
+/* Je séléctionne tout les input de 
+type submit et de type reset*/
+input[type="submit"], input[type="reset"] {
+    font-size: 1.7em;
+    border-radius: 25%;
+}
+
+#message {
+    resize: none;
 }

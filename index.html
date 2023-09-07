@@ -129,31 +129,56 @@
     <p id="animal">Test</p>
     
     <form action="">
-        <label for="name">Nom : </label>
-        <input type="text" name="name" id="name">
+        <fieldset>
+            <legend>Mon beau formulaire</legend>
+            <label for="name">Nom : </label>
+            <input type="text" name="name" id="name">
+            <br><br>
+            <label for="prenom">Prénom : </label>
+            <input type="text" name="prenom" id="prenom">
+            <br><br>
+            <label for="age">Age : </label>
+            <input type="number" name="age" id="age">
+            <br><br>
+            <input type="radio" name="sexe" id="masculin">
+            <label for="masculin">Masculin</label>
+            <br>
+            <input type="radio" name="sexe" id="feminin">
+            <label for="feminin">Féminin</label>
+            <br>
+            <input type="radio" name="sexe" id="autruche" checked>
+            <label for="autruche">Autruche</label>
+            <br><br>
+            <input type="checkbox" name="me" id="me">
+            <label for="me">Je suis moi ?</label>
+            <br><br>
+            <textarea name="message" placeholder="Je veux un message" id="message" cols="30" rows="10"></textarea>
+
+            <input type="submit" value="Envoyer !">
+        </fieldset>
+    </form>
+    <form action="">
+        <h1>HTML form</h1>
+        <label for="firstname">First name: </label>
+        <input type="text" name="firstname" id="firstname">
         <br><br>
-        <label for="prenom">Prénom : </label>
-        <input type="text" name="prenom" id="prenom">
+        <label for="lastname">Last name: </label>
+        <input type="text" name="lastname" id="lastname">
         <br><br>
-        <label for="age">Age : </label>
-        <input type="number" name="age" id="age">
+        <label for="email">E-mail: </label>
+        <input type="email" name="email" id="email">
         <br><br>
-        <input type="radio" name="sexe" id="masculin">
-        <label for="masculin">Masculin</label>
+        <input type="radio" name="sexe" id="sexe">
+        <label for="male">Male</label>
         <br>
-        <input type="radio" name="sexe" id="feminin">
-        <label for="feminin">Féminin</label>
-        <br>
-        <input type="radio" name="sexe" id="autruche">
-        <label for="autruche">Autruche</label>
+        <input type="radio" name="sexe" id="sexe">
+        <label for="female">Female</label>        
         <br><br>
-        <input type="checkbox" name="me" id="me">
-        <label for="me">Je suis moi ?</label>
-        <br><br>
-        <input type="submit" value="Envoyer !">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
     </form>
     
     <script src="./script.js"></script>
-
+    <br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
