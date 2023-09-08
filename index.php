@@ -195,6 +195,53 @@
         else 
             echo "<p>Tu es basique donc tu es nul</p>";
     ?>
+    <form action="" method="post">
+        <pre>
+        <label for="firstname">First Name: </label>
+        <input type="text" name="firstname" id="firstname">
+        <br>
+        <label for="lastname">Last Name: </label>
+        <input type="text" name="lastname" id="lastname">
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password">
+        <br>
+        <label for="passwordconfirm">Confirm Password: </label>
+        <input type="password" name="password" id="password">
+        </pre>
+        <label for="gender">Gender: </label>
+        <br>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="">Female</label>
+        <input type="radio" name="gender" id="others" value="others">
+        <label for="">Others</label>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
     
+    <?php 
+    // Si method post est rentrer dans le formulaire il faut 
+    // Utiliser $_POST
+    // Sinon si la method get est rentrer dans le formulaire il 
+    // Faut utiliser $_GET
+    // La foncion isset sert à regarder si la variable qui lui
+    // est donner est bien défini dans ce cas si elle regarde
+    // Si la variable $_POST est défini 
+        if (isset($_POST) && !empty($_POST)) { // $_GET
+            echo '<pre>'; var_dump($_POST); echo '</pre>';
+            echo $_POST['firstname'];
+            // Sha1 Hash le mot c'est à dire 
+            // Le compléxifi et le rend ilisible 
+            // sha1 / md5
+            echo sha1($_POST['password']) . "<br>";
+            echo md5($_POST['password']);
+        }
+    ?>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
