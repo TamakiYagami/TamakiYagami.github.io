@@ -67,7 +67,8 @@ function montre() {
 
 // setInterval(montre, 2000)
 
-// Array = Tableau
+// Array = Tableau 
+// C'est un tableau indéxer
 // Type de variable qui est elle même un tableau
 //          0      1       2    3
 var tab = [
@@ -105,15 +106,85 @@ console.log(Chmilblik)
 console.log(Chmilblik.length)
 
 // getElemntById séléctionne un élement qui à l'id défini sur 
-//animal dans ce cas
+// animal dans ce cas
 // addEventListener créer une écoute d'évenement 
 let animal = "Autruche"
 let temp = ""
+console.log(document.getElementById('animal'))
 document.getElementById('animal').addEventListener('click', function() {
     // Je regarde le texte qui ce trouve dans cette élément 
     temp = document.getElementById('animal').innerHTML 
     // Je modifie le texte qui ce trouve dans cette élément par la valeur
     // de la variable animal 
     document.getElementById('animal').innerHTML = animal
+    document.getElementById('animal').style.fontSize = '10em'
     animal = temp
 })
+
+while (false) {} // Tandis que ce qu'il ce trouve dans les parenthèses 
+// est vrai elle tourne
+
+for(var i=1; i <= 10; i++) { 
+    // Je défini un variable i qui s'incrémenter de 1 tout les tours de 
+    // la boucle grace à i++ 
+    // Et je lui demande de tourner jusqu'à ce que i soit supérieur à 10
+    console.log(i) 
+}
+
+// La boucle tourne jusqu'à la taille du tableau 
+for(var i=0; i < Chmilblik.length; i++) {
+    console.log(Chmilblik[i])
+    if (i == 3) {
+        break
+    }
+}
+
+do {
+    console.log('BONJOUR')
+    // Elle s'éxecute un fois même si la condition est fausse 
+    // Et elle continue si de s'éxectuer si la condition est vrai
+} while (false);
+
+for (index in Chmilblik) {
+    console.log(index)
+}
+
+// Tableau Associatif 
+var tab_assoc = {"ami":"Chien", "cafe":"Caféine" }
+
+for (index in tab_assoc) {
+    console.log(index)
+}
+
+for(var i=10; i >= 0; i--) {
+    // console.log("Il reste " + i + " lignes à écrire")
+    // console.log("Il reste ", i, "lignes à écrire")
+    console.log(`Il reste ${i} ligne${i <= 1 ? '' : 's'} à écrire`)
+}
+
+
+// i <= 1 ? '' : 's'
+// Reviens à faire 
+// if (i <= 1) { // Si vrai
+//     console.log('')
+// } else { // Sinon faux
+//     console.log('s')
+// }
+
+
+function diviseur(n) {
+    var i = 2;
+    var temp = '1';
+    while (i <= n) {
+        if (n % i == 0) {
+            temp = temp + ', ' + i;
+        }
+        i++;
+    }
+    return temp
+}
+
+
+for (let index = 1; index <= 100; index++) {
+    console.log(`Les diviseurs de ${index} sont: ${diviseur(index)}`)
+}

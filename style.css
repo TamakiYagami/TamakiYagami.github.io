@@ -1,3 +1,4 @@
+/* Je prend toute les balises tr puis td puis th et table et je leur donne des propriétés */
 tr, td, th, table {
     border: 1px solid red;
     border-radius: 15px;
@@ -15,14 +16,17 @@ tr:nth-child(3) {
     background-color: brown;
 }
 
+/* */
 .bonjour tr td{
     background-color: aquamarine;
 }
+
 /* Je modife le curseur que  
 quand la souris passe par dessu */
 #animal:hover {
     cursor: pointer;
 }
+
 /* Je séléctionne tout les input de 
 type submit et de type reset*/
 input[type="submit"][value="Submit"], input[type="reset"] {
@@ -34,6 +38,7 @@ input[type="submit"][value="Submit"], input[type="reset"] {
     resize: none;
     /*Je retire la possibilité de pouvoir redéfinir la taille du textearea*/
 }
+
 /* Je créer un animation qui ce nomme animationimg au début elle va transform scaleX en -1
 puis elle va transform scaleX en 1 et à la fin elle va transform scaleX en -1 */
 @keyframes animationimg {
@@ -62,7 +67,7 @@ img {
     opacity: 0.6; 
     width: 50%;
     /* height:auto; max-width: 100%;  Je ren mon image recurcive/Responsive*/
-    filter: blur(0.5px);
+    filter: blur(0.5px); /* Je donne un effet de flou */
     animation: animationimg 1.5s ease-in infinite ;
     /* Je dit que l'élément img joue l'animation animationimg qu'elle doit durée 1.5s en 
     fonctionnement en ease-in et elle ce joue un nombre infini de fois */
@@ -70,4 +75,8 @@ img {
 
 img:hover {
     transform: scaleX(-1);
+}
+
+.test {
+    color: blue;
 }
