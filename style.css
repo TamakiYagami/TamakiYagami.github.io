@@ -80,3 +80,7 @@ img:hover {
 .test {
     color: blue;
 }
+
+fieldset {
+    width: 10px;
+}

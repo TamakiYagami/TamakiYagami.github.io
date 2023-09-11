@@ -1,5 +1,6 @@
 <?php 
-$bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'Anto', 'Azerty123')
+// Quand le ficher est lu on veux que le fichier db sois lu aussi 
+require_once('db.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -198,7 +199,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'Anto', 'Azert
         else 
             echo "<p>Tu es basique donc tu es nul</p>";
     ?>
-    <form action="" method="post">
+    <form action="validation.php" method="post">
         <pre>
         <label for="firstname">First Name: </label>
         <input type="text" name="firstname" id="firstname">
@@ -223,6 +224,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'Anto', 'Azert
         <label for="">Female</label>
         <input type="radio" name="gender" id="others" value="others">
         <label for="">Others</label>
+        <input type="number" name="number" id="">
         <br><br>
         <input type="submit" value="Submit">
     </form>
@@ -235,24 +237,7 @@ $bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'Anto', 'Azert
     // La foncion isset sert à regarder si la variable qui lui
     // est donner est bien défini dans ce cas si elle regarde
     // Si la variable $_POST est défini 
-        if (isset($_POST) && !empty($_POST)) { // $_GET
-            echo '<pre>'; var_dump($_POST); echo '</pre>';
-            echo $_POST['firstname'];
-            // Sha1 Hash le mot c'est à dire 
-            // Le compléxifi et le rend ilisible 
-            // sha1 / md5
-            echo sha1($_POST['password']) . "<br>";
-            echo md5($_POST['password']);
-
-            $insert = $bdd->prepare('INSERT INTO utilisateur(firstname, lastname, email, password, gender) VALUES (?, ?, ?, ?, ?)');      
-            $insert->execute(array(
-                $_POST['firstname'], 
-                $_POST['lastname'], 
-                $_POST['email'], 
-                md5($_POST['password']), 
-                $_POST['gender']
-            ));
-        }            
+              
         // Je prépare ma commande
         $select = $bdd->prepare('SELECT * FROM utilisateur WHERE gender=?;');
         // Je l'execute en lui donnant une valeur à la place des ?
@@ -266,6 +251,36 @@ $bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'Anto', 'Azert
         echo '</pre>';
 
         echo $total[2]['gender'];
+    ?>
+
+    <form action="" method="post">
+        <fieldset>
+            <label for="name">Your Name:</label>
+            <br>
+            <input type="text" name="name" id="name">
+            <br>
+            <label for="mail">Your Mail</label>
+            <br>
+            <input type="email" name="mail" id="mail">
+            <br>
+            <label for="message">Your message</label>
+            <br>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <br>
+            <label for="number">Give me your number</label>
+            <br>
+            <input type="number" name="number" id="number">
+            <br>
+            <input type="submit" value="Envoyer">
+        </fieldset>
+    </form>
+
+    <?php
+        if (isset($_POST) && !empty($_POST)) {
+            settype($_POST['number'], 'integer');
+            $newmessage = $bdd->prepare('INSERT INTO messages(name, mail, message, number) VALUES (?, ?, ?, ?)');
+            $newmessage->execute(array($_POST['name'], $_POST['mail'], $_POST['message'], $_POST['number']));
+        }
     ?>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
