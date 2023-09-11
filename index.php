@@ -260,7 +260,6 @@ $bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'Anto', 'Azert
         // Je récupére tout ce que me renvoie ma commande
         $total = $select->fetchAll(PDO::FETCH_ASSOC);
 
-        
         // Je l'affiche 
         echo '<pre>';
         var_dump($total);
