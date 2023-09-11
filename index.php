@@ -1,3 +1,6 @@
+<?php 
+$bdd = new PDO('mysql:host=localhost;dbname=cours;charset=utf8;', 'Anto', 'Azerty123')
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -240,7 +243,29 @@
             // sha1 / md5
             echo sha1($_POST['password']) . "<br>";
             echo md5($_POST['password']);
-        }
+
+            $insert = $bdd->prepare('INSERT INTO utilisateur(firstname, lastname, email, password, gender) VALUES (?, ?, ?, ?, ?)');      
+            $insert->execute(array(
+                $_POST['firstname'], 
+                $_POST['lastname'], 
+                $_POST['email'], 
+                md5($_POST['password']), 
+                $_POST['gender']
+            ));
+        }            
+        // Je prépare ma commande
+        $select = $bdd->prepare('SELECT * FROM utilisateur WHERE gender=?;');
+        // Je l'execute en lui donnant une valeur à la place des ?
+        $select->execute(array("male"));
+        // Je récupére tout ce que me renvoie ma commande
+        $total = $select->fetchAll(PDO::FETCH_ASSOC);
+
+        // Je l'affiche 
+        echo '<pre>';
+        var_dump($total);
+        echo '</pre>';
+
+        echo $total[2]['gender'];
     ?>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
