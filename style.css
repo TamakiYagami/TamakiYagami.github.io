@@ -87,27 +87,80 @@ fieldset {
 
 .conteneur {
     background-color: black;
-    /* height: 200px; */
+    height: 600px;
     width: 100%; /* Prend toute la largeur de la page */
-    display: flex; /* L'afficher ce met en mode flex*/
-    justify-content: space-around ;
-    align-items: center;
-    /* flex-direction: column; */
+    display: flex; /* L'affichage ce met en mode flex*/
+    justify-content: space-around;
+    /* justify-content joue avec la largeur quand le flex-direction est en row 
+    quand flex-direction est en column il joue en hauteur*/
+    align-items:flex-start;
+    /* align-items fait la même chose que justify-content mais inverser c'est à dire 
+    qu'il joue avec la hauteur quand flex-direction est en row et en largeur quand 
+    il est en column*/
+    /* align-content: space-around; */
+    /* Fait la même chose que align-items mais il gère aussi les multilignes de conteneur */
+    flex-direction: row;
     flex-wrap: wrap;
+    /* le flex-wrap sert à remettre à la ligne quand les éléments n'ont plus de place dans la largeur 
+    quand il est en mode wrap
+    (Par défaut il est en mode nowrap)
+    */
 }
 
 .rouge {
     background-color: red;
     width: 10%;
     height: 100px;
+    border: 2px solid white;
 }
 .vert {
     background-color: green;
     width: 10%;
     height: 100px;
+    border: 2px solid white;
 }
 .orange {
     background-color: orange;
     width: 10%;
     height: 100px;
+    border: 2px solid white;
+}
+
+.grand {
+    background-color: darkgray;
+    width: 75%;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.petit {
+    background-color: aquamarine;
+    width: 45%;
+    height: 90%;
+    display: flex;
+    align-items: flex-end;
+}
+.petit h1 {
+    color: darkgray;
+    font-size: 3em;
+    margin: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#secondpetit {
+    background-color: transparent;
+    align-content: space-between;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.moyen {
+    width: 100%;
+    height: 30%;
+    background-color: aquamarine;;
+}
+
+.toutpetit {
+    width: 45%;
+    height: 30%;
+    background-color: aquamarine;
 }
