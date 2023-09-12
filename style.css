@@ -1,4 +1,16 @@
+/* Font face sert a rajouter de nouvelle
+famille d'écriture qui ne sont pas disponible
+Nativement (Sans rien rajouter en plus) */
+@font-face {
+    font-family: BebasNeue;
+    src: url(./fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: Nabla;
+    src: url(./fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
+}
 /* Je prend toute les balises tr puis td puis th et table et je leur donne des propriétés */
+
 tr, td, th, table {
     border: 1px solid red;
     border-radius: 15px;
@@ -163,4 +175,128 @@ fieldset {
     width: 45%;
     height: 30%;
     background-color: aquamarine;
+}
+.violet {
+    background-color: violet;
+}
+.Orange {
+    background-color: orange;
+}
+.bleu {
+    background-color: blue;
+}
+.red {
+    background-color: red;
+}
+
+.flexbox {
+    width: 70%;
+    height: 600px;
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flexbox h1 {
+    display: block;
+    margin: 2px;
+    font-size: 8em;
+    color: white;
+    font-weight: bolder;
+    font-family:Nabla;
+}
+
+
+
+.cote_gauche {
+    /* background-color: aqua; */
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.long {
+    width: 100%;
+    height: 20%;
+}
+.cote_gauche .gauche {
+    /* background-color: beige; Temporaire pour être visualisé */
+    width: 50%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_gauche .droite {
+    width: 45%;
+    height: 75%;
+}
+
+.cote_gauche .gauche .petite {
+    width: 100%;
+    height: 65%;
+}
+
+.cote_gauche .gauche .trespetite {
+    width: 100%;
+    height: 30%;
+}
+
+
+
+.cote_droit {
+    /* background-color: aqua; */
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.cote_droit .gauche {
+    /* background-color: beige; */
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+*
+.cote_droit .gauche .petite1 {
+    width: 100%;
+    height: 35%;
+}
+.cote_droit .gauche .petite2 {
+    width: 100%;
+    height: 20%;
+}
+.cote_droit .gauche .petite3 {
+    width: 100%;
+    height: 35%;
+}
+
+.cote_droit .droite {
+    /* background-color: beige; */
+    width: 45%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cote_droit .droite .petite1 {
+    width: 100%;
+    height: 40%;
+}
+.cote_droit .droite .petite2 {
+    width: 100%;
+    height: 30%;
+}
+.cote_droit .droite .petite3 {
+    width: 100%;
+    height: 25%;
+}
+.cote_droit .long {
+    height: 30%;
 }
