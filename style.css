@@ -9,6 +9,18 @@ Nativement (Sans rien rajouter en plus) */
     font-family: Nabla;
     src: url(./fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
 }
+@font-face {
+    font-family: minecraft;
+    src: url(./fonts/Minecrafter.Reg.ttf);
+}
+@font-face {
+    font-family: doctor;
+    src: url(./fonts/Doctor\ Glitch.otf);
+}
+@font-face {
+    font-family: keyboard;
+    src: url(./fonts/212\ Keyboard.otf )
+}
 /* Je prend toute les balises tr puis td puis th et table et je leur donne des propriétés */
 
 tr, td, th, table {
@@ -299,4 +311,28 @@ fieldset {
 }
 .cote_droit .long {
     height: 30%;
+}
+
+#minuteur {    
+    letter-spacing: 10px;
+    font-size: 6em;
+    position: absolute;
+    font-family: keyboard;
+    color: rgba(0, 0, 0, 0.4);
+    background-image: -webkit-gradient(
+        linear, 
+        left top, 
+        right top, 
+        color-stop(0, #f22), 
+        color-stop(0.15, #f2f), 
+        color-stop(0.3, #22f), 
+        color-stop(0.45, #2ff), 
+        color-stop(0.6, #2f2), 
+        color-stop(0.75, #2f2), 
+        color-stop(0.9, #ff2), 
+        color-stop(1, #f22)
+    );
+    border-radius: 15px;
+    margin: 100px;
+    height: 78px;
 }
