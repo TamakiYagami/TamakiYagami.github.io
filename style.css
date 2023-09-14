@@ -315,7 +315,7 @@ fieldset {
 
 #minuteur {    
     letter-spacing: 10px;
-    font-size: 6em;
+    font-size: 9em;
     position: absolute;
     font-family: keyboard;
     color: rgba(0, 0, 0, 0.4);
@@ -333,6 +333,27 @@ fieldset {
         color-stop(1, #f22)
     );
     border-radius: 15px;
-    margin: 100px;
-    height: 78px;
+    height: 116px;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-61%);
+}
+
+input[type='number'] {
+    width: 50%;
+    font-size: 1.5em; 
+    border: none;
+    background: none;
+    outline: none;
+    -moz-appearance: textfield;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 23%;
+    font-size: 2em;
+}
+form label {
+    line-height: 10px;
 }
