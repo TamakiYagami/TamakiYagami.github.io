@@ -1,0 +1,60 @@
+table {
+    border-collapse: collapse;
+    font-size: 1.7em;
+    font-family: 'Courier New', Courier, monospace;
+}
+table th[colspan="3"] {
+    width: 400px;
+}
+table th[colspan="1"] {
+    width: 50px;
+}
+
+table .drapeau {
+    border-right: 1px solid white;
+    width: 10px;
+    padding: 7px;
+    padding-left: 3px;
+}
+table th {
+    background-color: black;
+    color: #FCFEFE;
+    border: 0px;
+    padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+table thead th, table tfoot th {
+    background-color: #005500;
+    padding: 5px;
+}
+table td {
+    border: 1px solid black;
+    color: black;
+}
+
+table tbody tr {
+    font-size: 18px;
+    text-align: center;
+}
+
+table tbody tr td[colspan="1"] {
+    text-align: left;
+}
+
+table tr td:last-child {
+    background-color: #FFD700;
+    font-weight: bold;
+}
+table tbody tr:hover td {
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+}
+table tbody tr:hover .drapeau {
+    border-right: 1px solid gray;
+}
+table tbody tr:hover td:last-child {
+    color: blue;
+}
