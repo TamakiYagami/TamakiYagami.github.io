@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Tableau JO</title>
-    <link rel="stylesheet" href="tableaujo.css">
+    <link rel="stylesheet" href="../style/tableaujo.css">
 </head>
 <body>
-    &copy;
     <table>
         <thead>
             <tr>

@@ -1,13 +1,13 @@
 <?php 
 // Quand le ficher est lu on veux que le fichier db sois lu aussi 
-require_once('db.php');
+require_once('./function/db.php');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <title>Cours PHP</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <?php 

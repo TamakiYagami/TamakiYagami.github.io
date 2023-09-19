@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cours FlexBox</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
     <div class="conteneur">

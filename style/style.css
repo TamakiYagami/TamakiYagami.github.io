@@ -3,23 +3,23 @@ famille d'écriture qui ne sont pas disponible
 Nativement (Sans rien rajouter en plus) */
 @font-face {
     font-family: BebasNeue;
-    src: url(./fonts/BebasNeue-Regular.ttf);
+    src: url(../fonts/BebasNeue-Regular.ttf);
 }
 @font-face {
     font-family: Nabla;
-    src: url(./fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
+    src: url(../fonts/Nabla-Regular-VariableFont_EDPT\,EHLT.ttf);
 }
 @font-face {
     font-family: minecraft;
-    src: url(./fonts/Minecrafter.Reg.ttf);
+    src: url(../fonts/Minecrafter.Reg.ttf);
 }
 @font-face {
     font-family: doctor;
-    src: url(./fonts/Doctor\ Glitch.otf);
+    src: url(../fonts/Doctor\ Glitch.otf);
 }
 @font-face {
     font-family: keyboard;
-    src: url(./fonts/212\ Keyboard.otf )
+    src: url(../fonts/212\ Keyboard.otf )
 }
 /* Je prend toute les balises tr puis td puis th et table et je leur donne des propriétés */
 

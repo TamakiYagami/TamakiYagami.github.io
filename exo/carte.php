@@ -5,7 +5,7 @@
     <title>Carte Postale</title>
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style/carte.css">
+    <link rel="stylesheet" href="../style/carte.css">
 </head>
 <body>
     <div class="carte">
@@ -13,9 +13,9 @@
             <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, porro quisquam? Ex, deserunt vitae veritatis quae dolorem nisi, cumque alias quam et beatae natus, iusto asperiores molestiae esse molestias inventore?</p>
         </div>
         <div class="timbre">
-            <img src="img/timbre.png" alt="Timbre">
+            <img src="../img/timbre.png" alt="Timbre">
         </div>
-        <img src="img/tampon.png" alt="Tampon">
+        <img src="../img/tampon.png" alt="Tampon">
         <p class="tampon">
             <!-- <script>
                 var date = new Date; 
@@ -23,7 +23,7 @@
             </script> -->
             <?php echo date('d/m/y'); ?>
         </p>
-        <img src="img/obliteration.png" alt="Obliteration">
+        <img src="../img/obliteration.png" alt="Obliteration">
         <div class="separateur"></div>
         <div class="information">
             <p>Jean Philipe Smet</p>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Horloge</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
     <p id="minuteur">00:00:00</p>
