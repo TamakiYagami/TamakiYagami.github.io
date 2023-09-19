@@ -1,0 +1,104 @@
+
+body {
+    background-color: blueviolet;
+}
+
+.carte {
+    background-color: cornsilk;
+    position: relative;
+    border: 2px solid black;
+    width: 700px;
+    height: 400px;
+    box-shadow: 5px 4px 5px black;
+}
+
+.separateur {
+    position: absolute;
+    /* La position absolute dit à notre élément de ce décoller
+    de la page pour bousculer aucun élément et pouvoir le 
+    déplacer comme on le souhaite */
+    height: 350px;
+    left: 400px;
+    top: 30px;
+    border-left: 3px solid black;
+}
+
+.timbre {
+    position: relative;
+    left: 590px;
+    top: 10px;
+    width: 85px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.timbre img {
+    position: relative;
+    right: 12px;
+    width: 110px;
+    height: 100px;
+}
+
+.texte {
+    position: absolute;
+    text-align: justify;
+    margin: 15px;
+    height: 333px;
+    width: 370px;
+}
+
+.texte p {
+    margin: 0;
+    font-size: 1.8em;
+    font-family: Ephesis, cursive;
+}
+
+img[alt="Tampon"] {
+    position: absolute;
+    width: 93px;
+    right: 145px;
+    top: 5px;
+    transform: rotate(20deg);
+}
+
+.tampon {
+    transform: rotate(20deg);
+    position: absolute;
+    right: 149px;
+    top: 27px;
+    font-weight: bolder;
+}
+
+img[alt="Obliteration"] {
+    position: absolute;
+    width: 110px;
+    right: 45px;
+    top: 46px;
+}
+
+.information {
+    position: absolute;
+    left: 455px;
+    top: 135px;
+}
+.information p {
+    font-family: Ephesis, cursive;
+    text-align: justify;
+    font-size: 1.4em;
+    font-weight: bolder;
+    width: 200px;
+    border-bottom: 1px solid black;
+}
+
+.copyright {
+    position: absolute;
+    bottom: 7px;
+    left: 40px;
+    padding: 10px;
+    font-size: 0.8em;
+    font-style: italic;
+}
+.copyright a {
+    text-decoration: none;
+    color: black
+}
