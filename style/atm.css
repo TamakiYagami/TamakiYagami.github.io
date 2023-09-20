@@ -1,0 +1,76 @@
+body {
+    user-select: none;
+}
+section {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    width: 395px;
+    background-color: rgba(128,128,128,0.693);
+    border: 3px solid black;
+    display: flex;
+    position: relative;
+}
+.num {
+    font-size: 1.1em;
+    border: 2px ridge black;
+    border-radius: 12px;
+    padding: 5px;
+    margin: 1px;
+    margin-bottom: 3px;
+    box-sizing: border-box;
+    height: 50px;
+    width: 92px;
+    text-align: center;
+    display: inline-block;
+    background: none;
+    font-weight: bolder;
+}
+#texte {
+    width: 100%;
+    border: none;
+}
+
+div.num:hover, button.num:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+#texte input {
+    width: 30%;
+    height: 90%;
+    text-align: center;
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px ridge black;
+    background-color: transparent;
+    border-radius: 12px;
+    outline: none;
+    cursor: default;
+}
+
+#reject p, #erase p, button[type='submit'] p {
+    height: 5px;
+    width: 62px;
+    padding: 0;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+
+#invisible {
+    display: none;
+}
