@@ -199,7 +199,7 @@ require_once('./function/db.php');
         else 
             echo "<p>Tu es basique donc tu es nul</p>";
     ?>
-    <form action="validation.php" method="post">
+    <form action="function/validation.php" method="post">
         <pre>
         <label for="firstname">First Name: </label>
         <input type="text" name="firstname" id="firstname">
@@ -230,6 +230,8 @@ require_once('./function/db.php');
     </form>
     
     <?php 
+
+    // echo $_GET['haninox'];
     // Si method post est rentrer dans le formulaire il faut 
     // Utiliser $_POST
     // Sinon si la method get est rentrer dans le formulaire il 

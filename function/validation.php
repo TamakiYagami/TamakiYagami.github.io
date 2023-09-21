@@ -18,5 +18,6 @@ if (isset($_POST) && !empty($_POST)) { // $_GET
         md5($_POST['password']), 
         $_POST['gender']
     ));
-    header('Location: index.php');
+    // $_GET['haninox']
+    header('Location: ../index.php');
 }      

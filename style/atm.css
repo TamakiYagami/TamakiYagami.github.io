@@ -74,3 +74,15 @@ div.num:hover, button.num:hover {
 #invisible {
     display: none;
 }
+
+
+
+
+input:required:valid {
+    outline: none;
+    border-color: chartreuse;
+}
+input:required:invalid {
+    outline: none;
+    border-color: red;
+}
