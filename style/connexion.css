@@ -1,0 +1,14 @@
+input {
+    background: none;
+    border: 3px ridge black;
+    border-radius: 10px;
+    margin: 2px;
+    outline: none;
+}
+
+input:required:valid {
+    background-color: chartreuse;
+}
+input:required:invalid {
+    background-color: red;
+}
