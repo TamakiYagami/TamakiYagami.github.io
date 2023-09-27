@@ -39,8 +39,8 @@ require_once('../../function/db.php')
     </form>
     <?php
     if (isset($_POST) && !empty($_POST)) { /* !empty($_POST) = count($_POST) !== 0 */
-        $select = $bdd->prepare("SELECT * FROM users WHERE username=?");
-        $select->execute(array($_POST['username']));
+        $select = $bdd->prepare("SELECT * FROM users WHERE username=? OR email=?");
+        $select->execute(array($_POST['username'], $_POST['email']));
         $select = $select->fetchAll();
         if (empty($select)) {
             $insert = $bdd->prepare('INSERT INTO users(prenom, nom, email, username, genre, password) VALUE (?, ?, ?, ?, ?, ?);');
@@ -54,7 +54,7 @@ require_once('../../function/db.php')
             ));
             header("Location: login.php");
         } else 
-            echo '<script> alert("Ce pseudo est déja utilisé donc vous devez en utiliser un autre qui ne soit pas le même mais qui ne comporte pas de caractère spécial parce que ca ne peux pas fonctionner et donc si vous ne faite pas ca ne pourra toujours pas fonctioner parce que vous êtes vraiment nul !") </script>';
+            echo '<script> alert("Ce pseudo ou l\'addresse email sont déja utilisé donc vous devez en utiliser un autre qui ne soit pas le même mais qui ne comporte pas de caractère spécial parce que ca ne peux pas fonctionner et donc si vous ne faite pas ca ne pourra toujours pas fonctioner parce que vous êtes vraiment nul !") </script>';
 
 
     }

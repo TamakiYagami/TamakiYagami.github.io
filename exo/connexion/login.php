@@ -1,6 +1,11 @@
 
 <?php
-require_once('../../function/db.php')
+require_once('../../function/db.php');
+session_start();
+if (!empty($_SESSION)) header('Location: index.php');
+if (!empty($_GET)) {
+    if ($_GET['success'] == 'reset') echo '<script> alert("Votre mot de passe à été modifié") </script>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -17,22 +22,24 @@ require_once('../../function/db.php')
             <label for="password">Mot de passe :</label>
             <input type="password" name="password" id="password" required>
             <input type="submit" value="Se connecter">
+            <a href="./forgotpassword.php">Mot de passe oublié ?</a>
             <a href="./register.php">Vous n'avez pas de compte ?</a>
         </pre>
     </form>
     <?php 
     if (isset($_POST) && !empty($_POST)) {
-        $select = $bdd->prepare('SELECT * FROM users WHERE (username=? OR email=?) AND password=?');
+        $select = $bdd->prepare('SELECT * FROM users WHERE (username=:login OR email=:login) AND password=:pass');
         $select->execute(array(
-            $_POST['username'],
-            $_POST['username'],
-            sha1($_POST['password'])
+            'login' => $_POST['username'],
+            'pass' => sha1($_POST['password'])
         ));
         $select = $select->fetch(PDO::FETCH_ASSOC);
         if (!empty($select)) {
-            session_start();
-            $_SESSION = $select;
-            header('Location: index.php');
+            if ($select['confirm']) {
+                $_SESSION = $select;
+                header('Location: index.php');
+            } else 
+                echo "<script> alert('Le l\'adresse mail n'est pas vérifier') </script>";
         } else
             echo "<script> alert('Le mot de passe ou le pseudo n\'est pas bon') </script>";
     }
