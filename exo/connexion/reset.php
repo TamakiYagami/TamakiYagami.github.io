@@ -1,5 +1,6 @@
 <?php 
 require_once('../../function/db.php');
+
 if (isset($_GET) && !empty($_GET)) {
     $select = $bdd->prepare('SELECT * FROM users WHERE id=? AND token=?');
     $select->execute(array(

@@ -1,5 +1,6 @@
 <?php
-require_once('../../function/db.php')
+require_once('../../function/db.php');
+require_once('mail.php')
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,7 +22,7 @@ require_once('../../function/db.php')
             <input type="email" name="email" id="email" required>
             <br>
             <label for="username">Pseudo :</label>
-            <input type="text" name="username" id="username" oninput='SingleUsername()' required>
+            <input type="text" name="username" id="username" required>
             <br>
             <label for="password">Mot de passe :</label>
             <input type="password" name="password" id="password" required>
@@ -52,11 +53,13 @@ require_once('../../function/db.php')
                 $_POST['genre'],
                 sha1($_POST['password'])
             ));
+            $token = GenerateToken(50);
+            $msg = "Lien pour vérifier votre adresse mail : http://localhost/TamakiYagami.github.io/exo/connexion/verify.php?token=$token";
+            SendEmail($_POST['email'], $msg, "Validation Adresse Mail", 'DWWM');
+
             header("Location: login.php");
         } else 
-            echo '<script> alert("Ce pseudo ou l\'addresse email sont déja utilisé donc vous devez en utiliser un autre qui ne soit pas le même mais qui ne comporte pas de caractère spécial parce que ca ne peux pas fonctionner et donc si vous ne faite pas ca ne pourra toujours pas fonctioner parce que vous êtes vraiment nul !") </script>';
-
-
+            echo '<script> alert("Ce pseudo ou l\'addresse email sont déja utilisé donc vous devez en utiliser un autre qui ne soit pas le même mais qui ne comporte pas de caractère spécial parce que ca ne peux pas fonctionner et donc si vous ne faite pas ca ne pourra toujours pas fonctioner parce que vous êtes vraiment nul ! Mais sinon pourquoi vous voulez vous créer un compte alors que le site est nul et même pas encore fini mais t\'es con ou QUOI LA ???? Mais alors t\'aurai pas un zob dans le cul et aussi t\'aurai une chmère et aussi un snikkers puis aussi un coca cherry ? Mais du-coup tu répond ?") </script>';
     }
     ?>
     <br><br><br><br><br><br><br><br><br><br>
@@ -69,23 +72,6 @@ require_once('../../function/db.php')
                 confirmPassword.setCustomValidity('')
             else                 
                 confirmPassword.setCustomValidity('Les mots de passe doivent être identique')      
-        }
-        function SingleUsername() {
-        //     let Username = document.getElementById('username')
-        //     document.cookie = "username = " + Username.value
-
-            <?php 
-        //         $select = $bdd->prepare("SELECT * FROM users WHERE username=?");
-        //         $select->execute(array(
-        //             $_COOKIE['username']
-        //         ));
-        //         $select = $select->fetchAll();
-        //         setcookie('select', empty($select), time() + (86400 * 30), "/");
-        //     ?>                
-        //     // if (bool) {
-        //     //     Username.setCustomValidity('Ce nom d\'utilisateur est déjà utilisé')
-        //     // }
-
         }
     </script>        
 

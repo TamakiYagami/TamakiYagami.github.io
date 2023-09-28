@@ -39,7 +39,7 @@ if (!empty($_GET)) {
                 $_SESSION = $select;
                 header('Location: index.php');
             } else 
-                echo "<script> alert('Le l\'adresse mail n'est pas vérifier') </script>";
+                echo "<script> alert('L\'adresse mail n\'est pas vérifier') </script>";
         } else
             echo "<script> alert('Le mot de passe ou le pseudo n\'est pas bon') </script>";
     }
