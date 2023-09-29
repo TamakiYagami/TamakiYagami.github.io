@@ -8,8 +8,10 @@ if (isset($_GET) && !empty($_GET)) {
         $_GET['token']
     ));
     $select = $select->fetchAll();
+
     if (empty($select)) 
         header('Location: login.php');
+    elseif ($select['confirm'] == 0) header('Location: login.php');
 } else 
     header('Location: login.php');
 
@@ -45,7 +47,7 @@ if (isset($_GET) && !empty($_GET)) {
             ));
             $update = $update->rowCount();
             if ($update > 0) 
-                header('Location: login.php?success=reset');
+                header('Location: login.php');
             else
                 echo 'Une erreur c\'est produite ';
         }

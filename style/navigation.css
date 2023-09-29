@@ -1,0 +1,11 @@
+li {
+    display: inline-block;
+}
+
+ol {
+    list-style-type:none;
+}
+
+nav {
+    background-color: aqua;
+}

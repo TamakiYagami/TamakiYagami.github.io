@@ -4,7 +4,10 @@ require_once('../../function/db.php');
 session_start();
 if (!empty($_SESSION)) header('Location: index.php');
 if (!empty($_GET)) {
-    if ($_GET['success'] == 'reset') echo '<script> alert("Votre mot de passe à été modifié") </script>';
+    if (isset($_GET['success'])) {
+        if ($_GET['success'] == 'reset') echo '<script> alert("Votre mot de passe à été modifié") </script>';
+        if ($_GET['success'] == 'mail') echo '<script> alert("Votre adresse mail à été confirmé") </script>';
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -44,5 +47,6 @@ if (!empty($_GET)) {
             echo "<script> alert('Le mot de passe ou le pseudo n\'est pas bon') </script>";
     }
     ?>
+
 </body>
 </html>
