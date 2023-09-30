@@ -20,3 +20,26 @@ if (empty($_SESSION)) header('Location: login.php');
     <a href="deconnexion.php">Se Déconnecter</a>
 </body>
 </html>
+
+
+<!-- 
+    Je suis un variable Post ($_POST) je stocke des données
+    Je suis créer automatiquement
+    Je suis utilisé dans les formulaires
+    Je stocke les données des formaire 
+    quand ils sont en méthode Post
+
+    Comme je stocke les données je peux être utilisé 
+    pour redonner les données
+
+    Je suis utilisé pour insert des valeurs dans les 
+    bases de donnée
+
+    Mais attention je suis une variable post mais ca ne veux
+    pas dire que j'envoie des données 
+    je les stocke juste
+
+    Method post = Je stocke les données dans $_POST 
+    Method get = Je stocke les donnée dans $_GET
+
+ -->
