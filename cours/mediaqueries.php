@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Media Queries</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.0/css/all.css">
-
     <link rel="stylesheet" href="../style/media.css">
 </head>
 <body>
