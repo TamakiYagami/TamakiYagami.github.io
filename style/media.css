@@ -1,0 +1,55 @@
+.grand {
+    width: 1000px;
+}
+
+div {
+    width: 200px;
+    height: 100px;
+    display: inline-block;
+    background-color: black;
+}
+
+@media screen and (max-width: 850px){
+    .grand div {
+        display: block;
+    }
+}
+
+.bleu {
+    background-color: blue;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.pourpre {
+    background-color: #7E0E40;
+}
+
+.chartreuse {
+    background-color: chartreuse;
+}
+
+
+.damier {
+    width: 415.3px;
+    height: 308.49px;
+    background-color: chocolate;
+}
+.damier div {
+    width: 100px;
+    height: 100px;
+    background-color:blue;
+}
+
+@media screen and (max-width: 1000px) {
+    .damier .noir {
+        background-color: black;
+        border-radius: 50%;
+    }
+    .damier .blanc {
+        background-color: white;
+        border-radius: 50%;
+    }
+}

@@ -9,3 +9,33 @@ ol {
 nav {
     background-color: aqua;
 }
+
+.exo {
+    position: relative;
+    background: linear-gradient(90deg, #dd3d5f 0%, #fb7231 100%);
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 53%;
+    margin: 0 auto 0 auto;
+}
+
+.exo li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.exo ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.exo li {
+    margin: 7px;
+}
+
+#search {
+    border-right: 2px solid white;
+    margin-right: 20px;
+}

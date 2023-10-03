@@ -22,5 +22,18 @@
         </ul>
     </nav>
     <box-icon name='sushi' animation='tada'></box-icon>
+
+    <br><br><br><br><br>
+    <nav class="exo">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#"><span id="search"></span><box-icon name='search' color="#fff"></box-icon></a></li>
+        </ul>
+    </nav>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
