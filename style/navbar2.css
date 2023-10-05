@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0; right: 0; left: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    width: 25%;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+span {
+    margin-left: 5px;
+}
+box-icon[name='menu'] {
+    display: none;
+}
+
+@media screen and (max-width: 950px) {
+    nav ul {
+        display: none;
+        opacity: 0;
+        position: relative;
+    }
+    box-icon[name='menu'] {
+        display: contents;
+    }
+}

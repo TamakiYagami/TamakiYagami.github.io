@@ -27,27 +27,48 @@
     </ul>
     <script>
         let menu = document.getElementById('menu')
+        let interval
         menu.addEventListener('click', function() {
             let list = document.getElementById('slide')
             let li = document.getElementsByClassName('slideli')
-            console.log(list.style.display)
-            if (list.style.display == 'none') {
+
+            if (list.style.display.length == 0 || list.style.display == 'none') {
                 list.style.display = 'flex';
 
-                let interval = setInterval(function() {
+                /*
+                = Je défini quelque chose
+                == Je vérifie si quelque chose et égale à quelque chose
+                === Je vérifie si quelque chose et égale à quelque chose et que 
+                le type (string, integer, float, booléan, NULL) est le même 
+                */
+
+                interval = setInterval(function() {
+
                     for (let index = 0; index < li.length; index++) {
                         li[index].style.opacity = 1  
                         li[index].style.display = 'block'                 
-                
                     }
+                    list.style.animationPlayState = 'paused'
                     clearInterval(interval)
+
                 },950)
                 
             } else {
-                list.style.animation = '1.3s linear 1.3s 1 reverse slideBottom'
-                let interval = setInterval(function() {
+                list.style.animation = '2s ease 1 reverse slideBottom'
+                list.style.animationPlayState = 'running'            
+
+                for (let index = 0; index < li.length; index++) {
+                    li[index].style.opacity = 0
+                    li[index].style.display = 'none'                 
+                }
+
+                interval = setInterval(function() {
+
                     list.style.display = 'none'
+                    list.style.animation = 'slideBottom 1s 1 linear'
+                    
                     clearInterval(interval)
+
                 },1000)
                 
             }
