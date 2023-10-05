@@ -28,8 +28,6 @@
         <div class="rouge"></div>
         <div class="orange"></div>  
         <div class="vert"></div>
-
-
     </div>
 
     <div class="grand">

@@ -13,36 +13,39 @@
             <box-icon name="world" color="#fff" size="30px"></box-icon>
             <span>Mondial World</span>
         </div>
-        <ul>
-            <li>Autruche</li>
-            <li>Chien</li>
+        <ul>                 
             <li>Chat</li>
+            <li>Chien</li>
+            <li>Autruche</li>
         </ul> 
         <div> 
             <box-icon name="github" type="logo" color="#fff" size="30px"></box-icon>
             <box-icon id='menu' name="menu" color="#fff" size="30px"></box-icon>
+            <box-icon name="x" type="icon" color="#fff" size='30px'></box-icon>
         </div>
     </nav>
     <script>
         $('#menu').click(function() {
-            if ($('nav ul').is(':visible')) {
-                $('nav ul').animate({
-                    opacity: 0,
-                }, 500, function() {
-                    $('nav ul').hide()
-                })
-            } else {
-                $('nav ul').show()
-                $('nav ul').animate({
-                    opacity: 1,
-                    left: '50px'
-                }, 500)
-                
-                $('nav').css({
-                    'background-color': '#000D1A',
-                    'bottom': 0,
-                })
-                
+            if ($('nav ul').is(':hidden')) {                    
+                $('nav').animate({
+                    bottom: 0,
+                    backgroundColor: '#000D1A'
+                }, 1000, function(){
+                    $('nav ul').css({'display': 'flex'})                
+                })                
+                $('nav').addClass('SwitchNav')
+            }
+        })
+        $('box-icon[name="x"]').click(function() {
+            if ($('nav ul').is(':visible')) {                     
+                $('nav').animate({
+                    bottom: '93.5%',
+                    backgroundColor: '#000'
+                }, 1000, function() {
+                    $('nav').removeClass('SwitchNav')
+
+                })                         
+                $('nav ul').hide()
             }
         })
     </script>
