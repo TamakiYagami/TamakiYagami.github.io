@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff url(https://images.hdqwalls.com/wallpapers/the-bar-at-road-corner-cat-evening-time-5f.jpg) center center/cover no-repeat fixed;
+}
+
+nav {
+    position: fixed;
+    top: 0; right: 0; left: 0;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 2px solid grey;
+    background-color: #360200;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+}
+nav span {
+    font-size: 1.4em;
+    margin: 20px;
+}
+
+
+nav span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+}
+nav ul li {
+    margin-left: 10px ;
+}
+nav ul a, footer ul a {
+    font-size: 1.3em;
+    border: 2px solid #191919;
+    border-radius: 25px;
+    text-decoration: none;
+    background-color: #8b0500;
+    padding: 5px 10px;
+    color: white;
+}
+
+nav div box-icon[name="sun"] {
+    display: none;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 2px solid grey;
+    background-color: #360200;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+}
+footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div p {
+    color: white;
+    margin: 20px;
+    font-size: 2em;
+}
+
+form {
+    color: white;
+    border: 5px solid #191919;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 650px;
+    margin: 100px auto 0 auto;
+    width: 700px;
+    background-color: #333333;
+    background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div a {
+    color: white;
+}
+
+form input {
+    text-align: center;
+    width: 250px;
+    font-size: 1.2em;
+    height: 50px;
+    cursor: url('https://e7.pngegg.com/pngimages/172/297/png-clipart-cursor-cursor.png'), auto;
+    border: 3px solid #191919;
+    border-radius: 5px;
+}
+
+form label {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+form input[type="submit"] {
+    width: 200px;
+}
+div span {
+    margin: 0 auto 0 auto;
+}
+textarea {
+    resize: none;
+}
