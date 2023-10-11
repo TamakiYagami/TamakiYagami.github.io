@@ -54,13 +54,6 @@ if (!empty($_SESSION)) {
 
 
 
-
-
-
-
-
-
-
         <?php include 'inc/footer.php' ?>
 
 </body>

@@ -19,7 +19,6 @@ function TestID($bdd) {
 }
 if (isset($_POST) && !empty($_POST)) {
     
-    echo (int)TestID($bdd);
     $insert = $bdd->prepare('INSERT INTO cat (id, prenom, color, photo, description, sexe) VALUES (?, ?, ?, ?, ?, ?)');
     $insert->execute(array(
         (int)TestID($bdd),

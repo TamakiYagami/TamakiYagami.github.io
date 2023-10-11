@@ -34,10 +34,17 @@ require_once('../../function/dbCat.php');
                 </datalist>
                 <input list='cat'> -->
                 <select name="cat" id="catSelect" required>
-                    <option value="1">Ronron</option>
-                    <option value="2">Lily</option>
-                    <option value="3">Pompette</option>
-                    <option value="4">Garfield</option> 
+                    <?php
+                        $select = $bdd->prepare('SELECT * FROM cat WHERE reserver=0 AND veto=0 AND transfer=0'); 
+                        // Je séléctionne toute les colonnes et les lignes qui on la colonne reserver, veto et transfer à 0
+                        $select->execute();
+                        $select = $select->fetchAll();
+                        if (!empty($select)) { // Je vérifie que j'ai des lignes qui ont était récuperer
+                            for ($i=0; $i < count($select); $i++) { // Je fait une boucle qui tourne le nombre de ligne récupérer
+                                echo "<option value='" . $select[$i]['id'] . "'>" . $select[$i]['prenom'] . "</option>";
+                            }
+                        }
+                    ?>
                 </select>
                 <label for="table">N° Table :</label>
                 <select name="table" id="table" required>
@@ -49,10 +56,11 @@ require_once('../../function/dbCat.php');
                 </select>
                 <label for="date">Date :</label>
                 <input type="datetime-local" name="date" id="date" required 
+                
                     value="<?php echo date('Y-n-d'); ?>T<?php echo date('H')+2; ?>:00" 
                     min="<?php echo date('Y-n-d'); ?>T08:00" 
                     max="<?php echo date('Y-n')?>-<?php echo date('d')+7; ?>T19:00"> 
-                    
+                    <!-- Ici je récupère la date d'aujourd'hui pour pouvoir définir value, min, max -->
                 <label for="comment">Commentaire :</label>
                 <textarea name="comment" id="comment" cols="30" rows="5" maxlength='255'></textarea>
                 <input type="submit" value="Faire ma réservation">
@@ -61,6 +69,7 @@ require_once('../../function/dbCat.php');
 
         <?php 
         if (isset($_POST) && !empty($_POST)) {
+            // J'insert dans la base de donnée les inforamtions que je lui est donnée dans le formulaire
             $insert = $bdd->prepare('INSERT INTO reservation(id_client, id_cat, date, comment, tab) VALUES (?, ?, ?, ?, ?)');
             $insert->execute(array(
                 (int)$_SESSION['id'],
