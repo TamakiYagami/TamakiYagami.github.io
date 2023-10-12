@@ -5,6 +5,8 @@ body {
 }
 
 nav {
+    position: fixed;
+    left: 0; right: 0; top: 0;
     background-color: aliceblue;
     display: flex;
     align-items: center;
@@ -39,4 +41,91 @@ nav ul button {
     color: white;
     border: 1px solid gray;
     border-radius: 10px;
+}
+
+footer {
+    background-color: #161616e6 ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+footer div:first-child {
+    display: flex;
+    justify-content: space-around;
+}
+footer .signup {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    flex-direction: column;
+    color: #eed7d7;
+    padding-left: 35px;
+    border-left: 1px solid white;
+    justify-content: space-between;
+}
+footer .signup span {
+    display: flex;
+    font-size: 1.3em;
+    font-weight: bolder;
+    align-items: center;
+}
+footer .signup span box-icon {
+    margin-right: 10px;
+}
+footer .signup p {
+    width: 75%;
+}
+footer .signup button {
+    background-color:rgb(24, 130, 236);
+    padding: 15px;
+    color: white;
+    width: 35%;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul li:first-child {
+    font-weight: bolder;
+}
+
+footer ul li {
+    margin: 10px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #eed7d7
+}
+footer .logo {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;    
+    padding-top: 35px;
+    color: #eed7d7
+}
+footer .bar {
+    border-top: 1px solid black;
+    width: 85%;
+    height: 1px;
+    margin: 25px auto 0 auto;
+    opacity: 0.6;
+}
+
+
+footer .logo a {
+    text-decoration: none;
+    color: #eed7d7;
+    margin-left: 20px;
+
+}
+
+footer .logo .page {
+    display: flex;
+    justify-content: space-around;
 }

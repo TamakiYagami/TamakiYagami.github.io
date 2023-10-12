@@ -5,7 +5,7 @@
         <box-icon name='twitter' type='logo' color='#ffffff' ></box-icon>
     </div>
     <ul>
-        <li><a href="support.php">Supprot</a></li>
+        <li><a target='_blank' href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Supprot</a></li>
         <?php if ($_GET['page'] !== "login") : ?>
             <li><a href="login.php"> <?php echo !empty($_SESSION) ? 'Se Déconnecter' : "S'identifier"?></a></li>
         <?php endif; ?>    </ul>

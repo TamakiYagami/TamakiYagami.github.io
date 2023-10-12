@@ -1,5 +1,5 @@
 <?php 
-require_once('../../function/dbCat.php');    
+require_once('inc/dbCat.php');    
 session_start();
 if (!empty($_SESSION)) {
     session_unset();
