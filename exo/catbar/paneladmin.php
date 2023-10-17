@@ -63,7 +63,7 @@ if (!empty($_SESSION)) {
                 if (!empty($select)) {
                     # Le foreach prend tout ce qui ce trouve dans $select et le range dans les variable $index qui sera l'index
                     # et valeur qui est son les valeur de l'index
-                    foreach ($select as $index => $valeur) {
+                    foreach ($select as $valeur) {
                         $id = $valeur['id'];
                         $prenom = $valeur['prenom'];
                         $color = $valeur['color'];

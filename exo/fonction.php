@@ -188,10 +188,70 @@
         };
 
         echo InverseString('Bonjour tout le monde') . "<br>";
-        echo InverseString('Je s\'appel groot');
+        echo InverseString('Je s\'appel groot') . "<br>";
 
-        # Créer une fonction qui ce nomme Acronyme  qui a comme paramètre une chaine de caractère 
-        # Et qui envoie que les initial des mot dans la phrase
+        # Créer une fonction qui ce nomme Acronyme qui a comme paramètre une chaine de caractère 
+        # Et qui envoie que les initial des mot de la phrase
+
+        function Acronyme($phrase) {
+            $resultat = "";
+            $tab_phrase = explode(" ", $phrase);
+
+            foreach($tab_phrase as $mot) {
+                $resultat = $resultat . strtoupper($mot[0]); 
+            }
+
+            return $resultat;
+        }
+
+        echo Acronyme("Jeudi une langue interviens entre notre epave sortie toute petite dorénavant");
+
+        # Créer une fonction AffichageTableau qui prend en paramètre un tableau et qui va devoir afficher un
+        # tableau en html sur notre page
+
+        $tab = [
+            'mdupond' => [
+                'prenom' => 'Martin',
+                'nom' => 'Dupond',
+                'age' => 25,
+                'ville' => 'Paris'
+            ],
+            "mmatin" => [
+                'prenom' => 'Toto',
+                'nom' => 'Matin',
+                'age' => 34,
+                'ville' => 'Auchwitz'
+            ]
+        ];
+
+
+        function AffichageTableau($tableau) {
+            if (!is_array($tableau) || empty($tableau)) {
+                return;
+            }
+            echo "<table>
+                <tr>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Age</th>
+                    <th>Ville</th>
+                </tr>";
+            foreach($tableau as $index => $ligne) {
+                $prenom = $ligne['prenom'];
+                $nom = $ligne['nom'];
+                $age = $ligne['age'];
+                $ville = $ligne['ville'];
+                echo "<tr id=$index> 
+                    <td>$prenom</td>
+                    <td>$nom</td>
+                    <td>$age</td>
+                    <td>$ville</td>
+                </tr>";
+            }
+            echo "</table>";
+        }
+
+        AffichageTableau($tab);
     ?>
 
 </body>
