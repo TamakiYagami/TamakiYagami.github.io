@@ -1,0 +1,46 @@
+form {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    margin: 250px auto 0 auto;
+    background-color: #0f0f0f;
+    background-image: url("https://www.transparenttextures.com/patterns/maze-black.png");
+}
+form div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+form div input {
+    width: 90%;
+    text-align: center;
+    padding: 35px;
+    border: none;
+    font-size: 1.7em;
+    font-weight: bolder;
+    color: white;
+    background-color: #000000;
+    background-image: url("https://www.transparenttextures.com/patterns/gplay.png");
+    margin: 0 auto;
+    outline: none;
+}
+
+form div button {
+    width: 50px;
+    font-size: 1.5em;
+    color: white;
+    /* background-color: transparent; */
+    background-color: #1b1b1b;
+    background-image: url("https://www.transparenttextures.com/patterns/shattered-dark.png");
+    font-weight: lighter;
+    padding: 15px;
+    cursor: pointer;
+    border: 5px ridge gray;
+    border-top: none;
+    border-left: none;
+    margin: 10px;
+}
