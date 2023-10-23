@@ -1,0 +1,106 @@
+body {
+    background-color: #f2e2c4;
+}
+nav {
+    display: flex;
+    justify-content: space-evenly   ;
+    align-items: center;
+    background-color: #6d9eeb;
+    border: 1px solid black;
+    margin-bottom: 55px;
+}
+nav div {
+    width: 49%;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4em;
+    margin-left: 15px;
+}
+
+nav h1 a {
+    color: red;
+}
+
+
+.Balise {
+    border: 1px dashed black;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px
+}
+
+.forme-wtf {
+    margin-top: 100px;
+    display: flex;
+    width: 100%;
+    height: 550px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.forme-wtf div:first-child {
+    display: flex;
+    width: 70%;
+
+    justify-content: space-evenly ;
+    align-items: center;
+}
+.forme-wtf div:first-child div:first-child {
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-top-right-radius: 10px;
+    width: 155px;
+    height: 155px;
+}
+.forme-wtf div:first-child div:nth-child(2) {
+    background-color: red;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 155px;
+    height: 155px ;
+}
+.forme-wtf div:first-child div:last-child {
+    background-color: aquamarine;
+    height: 155px;
+    width: 90px;
+    border: 1px solid black;
+    transform: skew(-20deg, 0deg);
+}
+.forme-wtf div:nth-child(2) {
+    background-color: green;
+    border: 1px solid black;
+    width: 300px;
+    height: 125px;
+    transform: rotate(10deg);
+}
+.forme-wtf div:last-child {
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+}
+.forme-wtf div:last-child div:first-child {
+    background-color: blue;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 125px;
+    width: 30%;
+}
+.forme-wtf div:last-child div:last-child {
+    background-color: yellow;
+    border: 1px solid black;
+    height: 125px;
+    width: 30%;
+    transform: rotate(0);
+}
+
+audio, video {
+    margin: 45px 0 0 0;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%);
+}

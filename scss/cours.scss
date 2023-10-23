@@ -1,0 +1,105 @@
+$couleur_principale: chartreuse !default; // Je créer un variable qui ce nomme couleur_princiaple est qui a comme valeur chartreuse
+$couleur_secondaire: brown; // Ici je créer une variable qui ce nomme couleur_secondaire est qui a comme valeur brown
+$couleur_random: rgb(random(255), random(255), random(255)); // random permet de donnée un nombre random entre 0 et une limite
+$dark: darken(#005184, 20%); // darken permet d'assombrir une couleur
+$light: lighten(#005184, 14%); // lighten permet d'eclercir une une couleur
+
+
+// Ici je créer une fonction grace à @function et qui ce nomme fois qui a comme
+// Paramètre $number et qui me renvoie mon number * 2 
+@function fois($number) {
+    @return $number * 2;
+}
+
+body {
+    background-color: $light;
+}
+
+h1, h2, h3 {
+    color: $couleur_principale;
+    margin: 0 fois(100)+px;
+    // margin: 0 40 px
+    // Le + me permet de retirer l'espace entre le resultat de ma fonction et
+    // le px 
+}
+
+// ul a {}
+ul {
+    margin: 10px;
+    a {
+        // Le & permet de reprendre l'élément qui est séléctionner juste de 
+        // Ou je le trouve
+        &:hover{
+            color: $couleur_principale
+        }
+        color: $couleur_random;
+    }
+    div {
+        background-color: $couleur_secondaire;
+    }
+}
+
+.text {
+    color: #005184;
+    margin: 25px;
+    padding: 0 10%;
+    border: 5px solid black;
+}
+
+
+
+div {
+    span {
+        // Extend permet de récupérer les propirété précdémeent écrite dans une
+        // Autre class
+        @extend .text
+    }
+}
+%texte {
+    width: 10px;
+    height: 10px;
+}
+
+$bool: true;
+
+@if $bool {
+    .box1 {
+        @extend %texte
+    }
+    .box2 {
+        @extend %texte
+    }
+    .box3 {        
+        @extend %texte
+    }
+    .box4 { 
+        @extend %texte
+    }
+    .box5 {
+        @extend %texte
+    }
+    .box6 {
+        @extend %texte
+    }
+} @else {
+    .box1 {
+        margin: 1px;
+    }
+}
+
+// Je créer une boucle qui a une variable $i qui est défini à 1 et qui va
+// Va tourner jusqu'a 3
+@for $i from 1 through 3 {
+    .box#{$i} {
+        color: aqua;
+    }
+}
+
+
+$i: 6;
+@while $i > 0 { // Tant que $i est plus grand que 0
+    .item-#{$i} {
+        width: 2em * $i;
+    }
+    $i: $i - 2; // Ici je redéfini la variable $i et je lui fait elle même -2 
+}

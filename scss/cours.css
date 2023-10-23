@@ -1,0 +1,57 @@
+body {
+  background-color: #007dcb;
+}
+
+h1, h2, h3 {
+  color: chartreuse;
+  margin: 0 200px;
+}
+
+ul {
+  margin: 10px;
+}
+ul a {
+  color: rgb(89, 210, 207);
+}
+ul a:hover {
+  color: chartreuse;
+}
+ul div {
+  background-color: brown;
+}
+
+.text, div span {
+  color: #005184;
+  margin: 25px;
+  padding: 0 10%;
+  border: 5px solid black;
+}
+
+.box6, .box5, .box4, .box3, .box2, .box1 {
+  width: 10px;
+  height: 10px;
+}
+
+.box1 {
+  color: aqua;
+}
+
+.box2 {
+  color: aqua;
+}
+
+.box3 {
+  color: aqua;
+}
+
+.item-6 {
+  width: 12em;
+}
+
+.item-4 {
+  width: 8em;
+}
+
+.item-2 {
+  width: 4em;
+}/*# sourceMappingURL=cours.css.map */
