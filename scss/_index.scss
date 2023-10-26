@@ -1,0 +1,175 @@
+$nuit: #2E1E28;
+$jour: #fff;
+
+// body[theme="jour"] {
+//     background-color: $jour;
+// }
+// body[theme="nuit"] {
+//     background-color: $nuit;
+// }
+
+.div {
+    background-color: aqua;
+}
+// Créer une variable liste en SASS qui va s'appeler fruit et qui va contenir : 
+// banane, cerise, ananas, pomme
+$fruit: banane, cerise, ananas, pomme;
+$fruit: "banane", "cerise", "ananas", "pomme";
+$fruit: banane cerise ananas pomme;
+
+// Utiliser une boucle pour faire 
+
+// .fruit-banane {
+//   width: 50%;
+// }
+// .fruit-cerise {
+//   width: 50%;
+// }
+// .fruit-ananas {
+//   width: 50%;
+// }
+// .fruit-pomme {
+//   width: 50%;
+// }
+
+@each $valeur in $fruit {
+    .fruit-#{$valeur} {
+        width: 50%;
+    }
+}
+@for $i from 1 through 4 {
+    // nth récupére la valeur d'une liste de l'indexe indiqué
+    .fruit-#{nth($fruit, $i)} {
+        width: 50%;
+    }
+}
+// Créer une fonction qui s'appelle firstOfList qui va récupérer la première 
+// Valeur d'une liste 
+
+// Créer une deuxième fonction qui s'appelle LastOfList qui va récupérer la 
+// Dernière valeur d'une lsite
+
+@function firstOfList($list) {
+    @return nth($list, 1);
+}
+
+@function lastOfList($list) {
+    @return nth($list, length($list));
+}
+$border: 1px solid black, 100px solid red, 1000px solid green;
+
+.div {
+    border: firstOfList($border);
+};
+
+.span {
+    border: lastOfList($border);
+}
+
+// Créer une variable qui contient une liste qui ce nomme $villes et qui contient
+// Lyon
+// Paris
+// Marseille
+// Rouen
+// Bourg de Péage
+
+// .ville-lyon {
+//      display: block,
+//      content: 'Lyon'
+// }
+// .ville-paris {
+//      display: block,
+//      content: 'Paris'
+// }
+// .ville-marseille {
+//      display: block,
+//      content: 'Marseille'
+// }
+// .ville-rouen {
+//      display: block,
+//      content: 'Rouen'
+// }
+// .ville-bourg-de-peage {
+//      display: block,
+//      content: 'Bourg de Péage'
+// }
+
+$villes:   
+    ("lyon" "Lyon") 
+    ("paris" "Paris")  
+    ("marseille" "Marseille") 
+    ("rouen" "Rouen") 
+    ("bourg-de-peage" "Bourg de péage");
+
+@each $value, $ville in $villes {
+    .ville-#{$value} {
+        display: block;
+        content: $ville
+    }
+}
+
+// Créer une variable liste qui va ce nommer $social et elle va contenir :
+// facebook, flickr, linkedin, twitter, vimeo, youtube
+// Et pour chaque réseau social une couleur leur sera attitré 
+// #3b5998, #0063db, #007bb6, #00aced, #aad450, #bb0000
+
+$social: 
+    (facebook, #3b5998)
+    (flickr, #0063db)
+    (linkedin, #007bb6)
+    (twitter, #00aced)
+    (vimeo, #aad450)
+    (youtube, #bb0000);
+
+// .social-nom-du-service {
+//     color: couleur-associee ;
+//     background-color: couleur-associee-10-pourcent-plus-claire ;
+// }
+
+
+// .social-facebook {
+//     color: #3b5998;
+//     background-color: #4c70ba;
+//   }
+    
+//   .social-flickr {
+//     color: #0063db;
+//     background-color: #0f7bff;
+//   }
+
+@each $nom, $color in $social {
+    .social-#{$nom} {
+        color: $color;
+        background-color: lighten($color, 10%);
+    }
+}
+
+@mixin border($taille) {
+    border: $taille solid black;
+    border-radius: 10px;
+    height: 170px;
+    width: 170px;
+}
+      
+.farfadet {
+    @include border(2px);
+}
+
+// Créer un mixin qui gère la mode nuit et la mode jour
+
+@mixin ToggleNight($toggle) {
+    @if $toggle == 'dark' {
+        background-color: $nuit;
+        color: $jour;
+    }@else {
+        background-color: $jour;
+        color: $nuit;
+    }
+}
+
+.body {
+    @include ToggleNight('dark');
+    a {
+        @include ToggleNight('light');
+    }
+}

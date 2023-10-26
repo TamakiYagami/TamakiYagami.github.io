@@ -1,0 +1,91 @@
+$color: rgb(40, 221, 241), rgb(255, 43, 32), rgb(47, 206, 15), rgb(189, 5, 189), rgb(85, 17, 17), rgb(232, 240, 14);
+$colorI: 1;
+
+.centre {
+    position: absolute;
+    left: 360px;
+    top: 353px;
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    span {
+        position: absolute;
+        color: white;
+        font-weight: bolder;
+        font-size: 1.7em;
+        z-index: 15;
+        left: 15px;
+        top: 28px;
+    }
+    .fleche {
+        position: relative;
+        border-right: 29px solid transparent;
+        border-bottom: 36px solid black;
+        border-left: 25px solid transparent;
+        z-index: 10;
+        left: 24px;
+        display: inline-block;
+        top: -24px;
+
+    }
+}
+
+.circle {
+    transition: rotate 2s; // animation: rotate 2s 1s 1 ;
+    transform: rotate(0deg);
+    position: relative;
+    height: 700px;
+    width: 700px;
+    background-color: #2E1E28;
+    border-radius: 50%;
+    // Je fait tourner une boucle de 1 à 36
+    // Mon $i initial est à 1
+    @for $i from 1 through 36 {
+        .box-#{$i} {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 50%;
+            margin: 0;
+            padding: 0;
+            // Avec tranlate Je modifie le centre de l'élément au lieu d'être possitionner sur une coté 
+            // il est positionner en fonction des pourcentage que on lui donne avant la virgule c'est en largeur
+            // après c'est en hauteur
+            // Mon rotate fait en sorte que je puisse tourner autour de mon cercle chaque élément
+            transform: translate(-50%, -50%) rotate($i*10 + 0deg);
+        }
+        #b-#{$i} {
+            border-left-color: nth($color, $colorI);
+            // Ici j'ai une liste $color est je choisi un élément de la liste grace à la fonction
+            // nth qui me permet de choisir l'indexe que je veux dans une liste, $colorI est une variable
+            // Que j'ai créer
+        }
+        $colorI: $colorI + 1;
+        @if $colorI > length($color) {
+            $colorI: 1;
+        }
+    }
+    .choix {
+            position: absolute;
+            left: 50%;
+            transform: translate(-100%, -50%);
+            top: 50%;
+            height: 0;
+            width: 0;
+            margin: 0;
+            padding: 0;
+            border-top: 27px solid transparent;
+            border-bottom: 23px solid transparent;
+            border-left: 348 px solid red;
+            span {
+                position: relative;
+                right: 330px;
+                top: -19px;
+                font-size: 2em;
+
+            }
+        }
+}

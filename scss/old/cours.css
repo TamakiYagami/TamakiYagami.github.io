@@ -11,7 +11,7 @@ ul {
   margin: 10px;
 }
 ul a {
-  color: rgb(89, 210, 207);
+  color: rgb(151, 216, 145);
 }
 ul a:hover {
   color: chartreuse;
@@ -51,6 +51,7 @@ ul div {
 .item-4 {
   width: 8em;
 }
+
 .item-2 {
   width: 4em;
 }/*# sourceMappingURL=cours.css.map */

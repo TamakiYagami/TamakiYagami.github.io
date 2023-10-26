@@ -1,0 +1,80 @@
+$background: #2E1E28;
+
+@mixin FlexColumnCenter() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin FlexRowCenter() {
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+.personalPage {
+    @include FlexColumnCenter();
+    background-color: $background;
+    width: 100%;
+    h1 {
+        font-size: 2.7em;
+        color: #95B7A5
+    };
+    h2 {
+        font-size: 2.2em;
+        color: #DDE9E2;
+    }
+    button {
+        font-size: 1.6em;
+        border-radius: 10px;
+        padding: 10px;
+        margin-left: 25px;
+        background-color: #785167;
+        border: none;
+        color: #DDE9E2;
+        text-decoration: underline;
+    }
+    .box {
+        @include FlexRowCenter();
+        article {
+            margin-top: 55px;
+            padding: 25px;
+            font-size: 1.2em;
+            height: 750px;
+            background-color: #95B7A5;
+            @include FlexColumnCenter();
+            button {
+                background-color: #DDE9E2;
+                color: black;
+           } 
+           p {
+            text-align: center;
+           }
+           
+           
+        }
+        .Triangle {
+            height: 0;
+            width: 0;
+            border-top: 72px solid transparent;
+            border-left: 480px solid #95B7A5;
+            margin-top: 55px;
+            margin-bottom: -55px;
+        }
+        .article {
+            width: 25%;
+            flex-direction: column;
+            justify-content: baseline;
+            align-items: baseline;
+        }
+    }
+    .TriangleSolo {
+        position: fixed;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
+        height: 0;
+        width: 0;
+        border-right: 767px solid #785167;
+        border-top: 250px solid transparent;
+    }
+}
