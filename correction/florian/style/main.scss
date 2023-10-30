@@ -1,0 +1,131 @@
+$red: rgb(228, 60, 60);
+
+@mixin marginpadding {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin flexcol {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexrow {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flexcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin size {
+    font-size: 25px;
+}
+
+body {
+    @include marginpadding();
+    
+    nav {
+        @include flexrow();
+        background-color: $red;
+        align-items: center;
+        border-bottom: 1px solid black;
+
+        span {
+            background-color: white;
+            font-weight: bolder;
+            padding: 16px 25px;
+        }
+        
+        ul {
+            @include flexrow();
+            list-style: none;
+            @include marginpadding();
+
+            li {
+                color: white;
+                font-weight: bolder;
+                margin: 0 15px;
+            }
+        }
+
+        div {
+            display: none
+        }
+    }
+
+    section {
+        @include flexcol();
+        @include flexcenter();
+        background-color: $red;
+        color: white;
+        padding: 100px 0;
+        border-bottom: 2px solid rgb(197, 197, 197);
+
+        h1 {
+            font-size: 70px;
+            @include marginpadding();
+        }
+
+        p {
+            @include size();
+        }
+
+        button {
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            outline: none;
+            padding: 15px 20px;
+        }
+    }
+
+    article {
+        padding: 50px 150px;
+
+        h1 {
+            font-size: 35px;
+        }
+
+        p {
+            width: 700px;
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        nav {
+            span {
+                width: 85%;
+            }
+
+            ul {
+                display: none;
+            }
+
+            div {
+                display: contents;
+                margin: 0 auto;
+            }
+
+            p {
+                color: white;
+                margin: 0 0;
+                font-size: 25px;
+                width: 50px;
+                text-align: center;
+            }
+        }
+
+        article {
+            padding: 50px 75px;
+
+            p {
+                width: auto;
+            }
+        }
+    }
+}

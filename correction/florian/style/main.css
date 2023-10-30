@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body nav {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(228, 60, 60);
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+body nav span {
+  background-color: white;
+  font-weight: bolder;
+  padding: 16px 25px;
+}
+body nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body nav ul li {
+  color: white;
+  font-weight: bolder;
+  margin: 0 15px;
+}
+body nav div {
+  display: none;
+}
+body section {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(228, 60, 60);
+  color: white;
+  padding: 100px 0;
+  border-bottom: 2px solid rgb(197, 197, 197);
+}
+body section h1 {
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+}
+body section p {
+  font-size: 25px;
+}
+body section button {
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  outline: none;
+  padding: 15px 20px;
+}
+body article {
+  padding: 50px 150px;
+}
+body article h1 {
+  font-size: 35px;
+}
+body article p {
+  width: 700px;
+  font-size: 20px;
+}
+@media screen and (max-width: 700px) {
+  body nav span {
+    width: 85%;
+  }
+  body nav ul {
+    display: none;
+  }
+  body nav div {
+    display: contents;
+    margin: 0 auto;
+  }
+  body nav p {
+    color: white;
+    margin: 0 0;
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+  }
+  body article {
+    padding: 50px 75px;
+  }
+  body article p {
+    width: auto;
+  }
+}/*# sourceMappingURL=main.css.map */

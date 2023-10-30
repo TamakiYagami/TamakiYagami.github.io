@@ -1,13 +1,23 @@
+<?php
+    require_once('./Controllers/read_ctrl.php');
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        th, td {
+            border: 1px solid black;
+            padding: 25px;
+        }
+    </style>
 </head>
 <body>
-    <!-- CRUD: CREATE, READ(SELECT), UPDATE, DELETE -->
-    <!-- Vous allez avoir plusieurs fichier 
+    <!-- CRUD: CREATE(INSERT INTO), READ(SELECT), UPDATE, DELETE
+
+    
+    Vous allez avoir plusieurs fichier 
     Dans un dossier 'Views' vous avez: create.php, read.php, update.php
     Dans un dossier 'Controllers' vous avez: create_ctrl.php, read_ctrl.php, update_ctrl.php, delete_ctrl.php 
 
@@ -28,8 +38,40 @@
     update.php affichera le formulaire prérempli d'user afin de la modifier
     read.php afficher une liste à puce des informations de l'user
 
-
 -->
-    
+    <form action="Views/create.php" method="post">        
+        <button type="submit">Ajouter utilisateur</button>
+        <a href="Views/login.php">Connexion</a>
+        <br><br><br><br>
+
+        <table>
+            <tr>
+                <th>ID :</th>
+                <th>Pseudo :</th>
+                <th>Mot de passe :</th>
+                <th>Description :</th>
+                <th>Actions :</th>
+            </tr>
+            <?php
+                foreach ($Tableau as $ligne) {
+                    echo '<tr>';
+
+                    foreach ($ligne as $column) {
+                        echo "<td>$column</td>";
+                    }
+                    
+                    echo "<td> 
+                        <button name='modify' value='$ligne->id' formaction='Views/update.php'>Modifier</button> 
+                        <button name='delete' value='$ligne->id' formaction='Controllers/delete_ctrl.php'>Supprimer</button> 
+                    </td>";
+
+                    echo '</tr>';
+                }
+            ?>
+        </table>
+    </form>
+
+
+
 </body>
 </html>

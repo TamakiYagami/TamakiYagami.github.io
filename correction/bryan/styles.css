@@ -1,0 +1,209 @@
+/* Styles pour le format bureau */
+@media screen and (min-width: 768px) {
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        background-color: rgba(243, 67, 54, 255); /* Nouvelle couleur de fond pour le body */
+        margin-top: -10px; /* Marge supérieure négative pour chevaucher la barre de navigation */
+        border-top: 5px solid #000; /* Bordure supérieure noire épaisse */
+        margin-bottom: 50px; /* Marge inférieure réduite pour laisser de l'espace au pied de page */
+    }
+    .navbar {
+        background-color: rgba(243, 67, 54, 255); /* Nouvelle couleur de fond pour la barre de navigation */
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        border-bottom: 3px solid rgb(155, 4, 4);
+    }
+    .navbar a {
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+        margin-right: 10px;
+        background-color: rgba(243, 67, 54, 255); /* Nouvelle couleur de fond pour les liens */
+        display: inline-block; /* Afficher les liens en mode bureau */
+    }
+    .navbar a:hover {
+        background-color: #fff;
+        color: rgba(243, 67, 54, 255);
+    }
+    .navbar .home-link {
+        font-size: 18px;
+        padding: 13px 20px; /* Ajustez la largeur du bouton Home ici */
+        margin-top: -17px;
+        margin-left: -10px;
+        margin-bottom: -20px;
+        background-color: white; /* Fond blanc pour le bouton "Home" */
+        color: #333; /* Couleur du texte pour le bouton "Home" */
+        position: relative;
+        z-index: 1;
+    }
+    .title {
+        color: white;
+        font-size: 72px; /* Augmentation de la taille du titre (2 fois) */
+        margin-top: 80px; /* Augmentation de la marge supérieure du titre */
+    }
+    .subtitle {
+        color: white;
+        font-size: 48px; /* Augmentation de la taille du sous-titre (2 fois) */
+    }
+    .button {
+        background-color: #000;
+        color: white;
+        border: none;
+        font-size: 48px; /* Augmentation de la taille du bouton (2 fois) */
+        padding: 30px 60px; /* Ajustement de la taille du bouton */
+        white-space: nowrap; /* Empêcher le texte de se couper sur plusieurs lignes */
+    }
+    .footer {
+        background-color: white; /* Fond blanc pour le pied de page */
+        color: #333;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 40%; /* Réduction de la hauteur du pied de page */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Aligner le contenu à gauche */
+        margin-right: 20px; /* Espacement entre le texte et l'image */
+    }
+
+    .footer-title {
+        font-size: 48px; /* Taille du titre du pied de page (2 fois) */
+        margin-bottom: 20px; /* Espacement entre le titre et le texte */
+        text-align: left; /* Alignement du texte du titre à gauche */
+        margin-left: 20px; /* Marge à gauche du titre */
+    }
+
+    .footer-text {
+        text-align: left; /* Texte aligné à gauche */
+        margin-left: 20px; /* Marge à gauche du texte */
+        margin-right: 20px; /* Marge à droite du texte */
+    }
+
+    .footer-image {
+        width: 100px; /* Largeur de l'image, ajustez selon vos besoins */
+        height: auto;
+    }
+}
+
+/* Styles pour le format mobile */
+@media screen and (max-width: 767px) {
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        background-color: rgba(243, 67, 54, 255); /* Nouvelle couleur de fond pour le body en mode mobile */
+        margin-top: -10px;
+        border-top: 5px solid #000;
+        margin-bottom: 50px;
+        overflow-x: visible; /* Permettre le défilement horizontal */
+    }
+    .navbar {
+        background-color: rgba(243, 67, 54, 255); /* Nouvelle couleur de fond pour la barre de navigation en mode mobile */
+        color: white;
+        padding: 10px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .navbar .home-link {
+        display: block;
+        font-size: 18px;
+        padding: 13px 0 13px 0;
+        background-color: white; /* Fond blanc pour le bouton Home en mode mobile */
+        color: #333;
+        width: 75%;
+        text-align: left;
+        padding-left: 20px;
+    }
+    .navbar .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        width: 25%;
+        text-align: right;
+        padding-right: 10px;
+    }
+    .navbar .menu-content {
+        display: none;
+        background-color: rgba(243, 67, 54, 255); /* Nouvelle couleur de fond pour le menu déroulant en mode mobile */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+    }
+    .navbar .menu-content a {
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 5px 10px;
+        margin-right: 10px;
+    }
+    .title {
+        color: white;
+        font-size: 72px; /* Augmentation de la taille du titre en mode mobile (2 fois) */
+        margin-top: 80px;
+    }
+    .subtitle {
+        color: white;
+        font-size: 48px; /* Augmentation de la taille du sous-titre en mode mobile (2 fois) */
+    }
+    .button {
+        background-color: #000;
+        color: white;
+        border: none;
+        font-size: 48px; /* Taille du bouton en mode mobile (2 fois) */
+        padding: 30px 60px;
+        white-space: nowrap; /* Empêcher le texte de se couper sur plusieurs lignes */
+    }
+    .footer {
+        background-color: white;
+        color: #333;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 30%; /* Réduction de la hauteur du pied de page en mode mobile */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column; /* Les éléments de la foot bar sont en colonne */
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .footer-title {
+        font-size: 48px; /* Taille du titre du pied de page en mode mobile (2 fois) */
+        margin-bottom: 20px; /* Espacement entre le titre et le texte */
+        text-align: center;
+        margin-left: 20px;
+    }
+
+    .footer-text {
+        text-align: center; /* Texte aligné à gauche */
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .footer-image {
+        width: 100px;
+        height: auto;
+    }
+}
