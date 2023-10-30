@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+body nav {
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+body nav span {
+  background-color: white;
+  font-weight: bolder;
+  padding: 16px 25px;
+}
+body nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body nav ul li {
+  color: white;
+  font-weight: bolder;
+  margin: 0 15px;
+}
+body nav div {
+  display: none;
+}
+body section {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:red;
+  color: white;
+  padding: 100px 0;
+  border-bottom: 2px solid rgb(197, 197, 197);
+}
+body section h1 {
+  font-size: 70px;
+  margin: 0;
+  padding: 0;
+}
+body section p {
+  font-size: 25px;
+}
+body section button {
+  font-size: 21px;
+  background-color: black;
+  color: white;
+  outline: none;
+  padding: 15px 20px;
+}
+body article {
+  padding: 50px 150px;
+}
+body article h1 {
+  font-size: 35px;
+}
+body article p {
+  width: 700px;
+  font-size: 20px;
+}
+@media screen and (max-width: 700px) {
+  body nav span {
+    width: 85%;
+  }
+  body nav ul {
+    display: none;
+  }
+  body nav div {
+    display: contents;
+    margin: 0 auto;
+  }
+  body nav p {
+    color: white;
+    margin: 0 0;
+    font-size: 25px;
+    width: 50px;
+    text-align: center;
+  }
+  body article {
+    padding: 50px 75px;
+  }
+  body article p {
+    width: auto;
+  }
+}/*# sourceMappingURL=main.css.map */
+
+#slide {
+  list-style-type: none;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 75%;
+  background-color: rgba(255, 204, 255, 0.6); 
+  margin: 0 auto 0 auto;   
+  flex-wrap: wrap;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  animation: slideBottom 1s 1 linear;
+}
+@keyframes opaciter {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+#slide li {
+  display: none;
+  opacity: 0;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 15px 0 ;
+  animation: opaciter 1s 1 linear;
+
+}
+#slide li a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 700px){
+  .soft ul {
+      display: none;
+  }
+  .soft button {
+      display: none;
+  }
+
+  box-icon[name='menu'] {
+      display: inline;
+      margin: 10px 0 10px 0;
+      cursor: pointer;
+  }
+}
